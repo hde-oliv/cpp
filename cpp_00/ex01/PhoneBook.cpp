@@ -7,9 +7,12 @@
 PhoneBook::PhoneBook( void ) { this->size = 0; }
 PhoneBook::~PhoneBook( void ) {}
 
-Contact PhoneBook::getContact( int index ) const { return this->contacts[index]; }
+Contact PhoneBook::getContact( int index ) const {
+	return this->contacts[index];
+}
 
-void PhoneBook::setContact( std::string firstName, std::string lastName, std::string nickName, std::string phoneNumber,
+void PhoneBook::setContact( std::string firstName, std::string lastName,
+							std::string nickName, std::string phoneNumber,
 							std::string darkestSecret ) {
 	Contact *aContact = &this->contacts[nextContactSlot];
 	aContact->setFirstName( firstName );

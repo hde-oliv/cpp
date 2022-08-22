@@ -38,7 +38,7 @@ std::string getCommandLoop( void ) {
 int getContactIndex( int phoneBookSize ) {
 	int				  index;
 	std::stringstream ss;
-	std::string		  contactIndex = getNonEmptyInput( "Enter contact index: " );
+	std::string contactIndex = getNonEmptyInput( "Enter contact index: " );
 
 	ss << contactIndex;
 	ss >> index;
@@ -62,22 +62,33 @@ int main( void ) {
 			break;
 		} else if ( command == "ADD" ) {
 			std::cout << std::endl;
-			std::string firstName	  = getNonEmptyInput( "Enter first name: " );
-			std::string lastName	  = getNonEmptyInput( "Enter last name: " );
-			std::string nickName	  = getNonEmptyInput( "Enter nick name: " );
-			std::string phoneNumber	  = getNonEmptyInput( "Enter phone number: " );
-			std::string darkestSecret = getNonEmptyInput( "Enter darkest secret: " );
-			aPhoneBook.setContact( firstName, lastName, nickName, phoneNumber, darkestSecret );
+
+			std::string firstName = getNonEmptyInput( "Enter first name: " );
+			std::string lastName  = getNonEmptyInput( "Enter last name: " );
+			std::string nickName  = getNonEmptyInput( "Enter nick name: " );
+			std::string phoneNumber =
+				getNonEmptyInput( "Enter phone number: " );
+			std::string darkestSecret =
+				getNonEmptyInput( "Enter darkest secret: " );
+
+			aPhoneBook.setContact( firstName, lastName, nickName, phoneNumber,
+								   darkestSecret );
+
 			std::cout << "Contact added." << std::endl << std::endl;
 		} else if ( command == "SEARCH" ) {
-			std::cout << " |Index     |F. Name   |L. Name   |N. Name   | " << std::endl;
+			std::cout << " |Index     |F. Name   |L. Name   |N. Name   | "
+					  << std::endl;
+
 			for ( int i = 0; i < aPhoneBook.getSize(); i++ ) {
 				std::cout << aPhoneBook.getContact( i ).toFormat() << std::endl;
 			}
+
 			std::cout << std::endl;
+
 			int index = getContactIndex( aPhoneBook.getSize() );
 			if ( std::cin.fail() ) return 1;
 			std::cout << aPhoneBook.getContact( index ).toString() << std::endl;
+
 			std::cout << std::endl;
 		}
 	}

@@ -8,7 +8,8 @@ class PhoneBook {
 	PhoneBook( void );
 	~PhoneBook( void );
 	Contact getContact( int index ) const;
-	void	setContact( std::string firstName, std::string lastName, std::string nickName, std::string phoneNumber,
+	void	setContact( std::string firstName, std::string lastName,
+						std::string nickName, std::string phoneNumber,
 						std::string darkestSecret );
 	int		getSize( void ) const;
 
