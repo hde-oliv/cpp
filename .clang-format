@@ -2,6 +2,8 @@
 BasedOnStyle: Google
 AccessModifierOffset: '0'
 AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: 'true'
+AlignConsecutiveDeclarations: 'true'
 ColumnLimit: '80'
 CompactNamespaces: 'false'
 Cpp11BracedListStyle: 'false'
