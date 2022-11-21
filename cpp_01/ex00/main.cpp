@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include <iostream>
 #include <string>
 
@@ -13,7 +15,9 @@ int main( void ) {
 	secondZombie->announce();
 	delete secondZombie;
 
-	std::cout << std::endl << "--- Test with randomChump ---" << std::endl << std::endl;
+	std::cout << std::endl
+			  << "--- Test with randomChump ---" << std::endl
+			  << std::endl;
 	randomChump( "Geezer" );
 	randomChump( "Bill" );
 

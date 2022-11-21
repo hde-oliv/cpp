@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include "Contact.hpp"
 
 #include <iostream>

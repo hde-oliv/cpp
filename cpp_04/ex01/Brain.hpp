@@ -9,7 +9,7 @@ class Brain {
 	Brain( Brain const &ref );
 	Brain( std::string const &idea );
 	~Brain( void );
-	Brain &operator=( Brain const &ref );
+	Brain	   &operator=( Brain const &ref );
 	std::string ideas[100];
 };
 

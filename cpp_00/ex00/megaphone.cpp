@@ -1,10 +1,11 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include <cctype>
 #include <iostream>
 
 void printStringInUppercase( std::string string ) {
 	for ( int i = 0; i < (int)string.size(); i++ ) {
-		char temp = toupper( string[i] );
-		if ( !std::isspace( temp ) ) std::cout << temp;
+		std::cout << (char)toupper( string[i] );
 	}
 }
 
@@ -15,7 +16,6 @@ int main( int argc, char *argv[] ) {
 		for ( int i = 1; i < argc; i++ ) {
 			std::string temp = argv[i];
 			printStringInUppercase( temp );
-			std::cout << " ";
 		}
 		std::cout << std::endl;
 	}

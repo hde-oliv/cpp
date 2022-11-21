@@ -17,11 +17,19 @@ int main( void ) {
 	}
 	{
 		std::cout << "--- pdf tests again---" << std::endl;
-		Animal *array = new Animal[100];
+		Animal *array[100];
 
 		for ( int i = 0; i < 100; i++ ) {
-			if ( i < 50 ) array[i] = new Dog();
+			if ( i < 50 )
+				array[i] = new Dog();
+			else
+				array[i] = new Cat();
 		}
+
+		for ( int i = 0; i < 100; i++ ) {
+			delete array[i];
+		}
+		std::cout << std::endl;
 	}
 	return 0;
 }

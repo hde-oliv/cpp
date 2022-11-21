@@ -8,9 +8,9 @@ class Animal {
 	Animal( void );
 	Animal( Animal const &ref );
 	virtual ~Animal( void );
-	Animal &operator=( Animal const &ref );
+	Animal		&operator=( Animal const &ref );
 	virtual void makeSound( void ) const;
-	std::string getType( void ) const;
+	std::string	 getType( void ) const;
 
 	protected:
 	std::string type;

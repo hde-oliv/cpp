@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 

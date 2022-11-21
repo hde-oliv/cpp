@@ -16,6 +16,8 @@ Form::Form( std::string const &name, int signGrade, int executeGrade )
 		throw Form::GradeTooHighException();
 	else if ( executeGrade > this->minGrade )
 		throw Form::GradeTooLowException();
+
+	this->isSigned = false;
 }
 
 Form::Form( Form const &ref )
@@ -25,7 +27,10 @@ Form::Form( Form const &ref )
 
 Form::~Form( void ) {}
 
-Form &Form::operator=( Form const &ref ) { return *this; }
+Form &Form::operator=( Form const &ref ) {
+	(void)ref;
+	return *this;
+}
 
 std::string Form::getName( void ) const { return this->name; }
 
@@ -54,9 +59,9 @@ std::ostream &operator<<( std::ostream &o, Form const &ref ) {
 }
 
 const char *Form::GradeTooHighException::what( void ) const throw() {
-	return "GradeTooHighException: grade higher than 1.";
+	return "GradeTooHighException";
 }
 
 const char *Form::GradeTooLowException::what( void ) const throw() {
-	return "GradeTooLowException: grade lower than 150.";
+	return "GradeTooLowException";
 }

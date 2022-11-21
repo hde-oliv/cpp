@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #ifndef HUMANA_HPP
 #define HUMANA_HPP
 

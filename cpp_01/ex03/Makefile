@@ -1,3 +1,5 @@
+# Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 SRC		:=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++

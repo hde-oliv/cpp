@@ -1,3 +1,5 @@
+# Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 SRC		:=	megaphone.cpp
 OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++

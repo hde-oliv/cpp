@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include <cstdlib>
 #include <iostream>
 #include <sstream>

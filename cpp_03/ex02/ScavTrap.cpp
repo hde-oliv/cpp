@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include "ScavTrap.hpp"
 
 #include <iostream>
@@ -5,14 +7,14 @@
 ScavTrap::ScavTrap( void ) : ClapTrap() {
 	this->attackDamage = 20;
 	this->energyPoints = 50;
-	this->hitPoints = 100;
+	this->hitPoints	   = 100;
 	std::cout << "ScavTrap default constructor called." << std::endl;
 }
 
 ScavTrap::ScavTrap( std::string const &name ) : ClapTrap( name ) {
 	this->attackDamage = 20;
 	this->energyPoints = 50;
-	this->hitPoints = 100;
+	this->hitPoints	   = 100;
 	std::cout << "ScavTrap parametric constructor called." << std::endl;
 }
 
@@ -27,8 +29,8 @@ ScavTrap::~ScavTrap( void ) {
 ScavTrap &ScavTrap::operator=( ScavTrap const &ref ) {
 	this->attackDamage = ref.attackDamage;
 	this->energyPoints = ref.energyPoints;
-	this->hitPoints = ref.hitPoints;
-	this->name = ref.name;
+	this->hitPoints	   = ref.hitPoints;
+	this->name		   = ref.name;
 	std::cout << "ScavTrap copy assignment called." << std::endl;
 	return ( *this );
 }

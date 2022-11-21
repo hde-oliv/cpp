@@ -1,3 +1,5 @@
+# Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 SRC		:=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++

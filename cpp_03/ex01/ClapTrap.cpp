@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include "ClapTrap.hpp"
 
 #include <iostream>
@@ -14,10 +16,10 @@ ClapTrap::ClapTrap( std::string const &name )
 }
 
 ClapTrap::ClapTrap( ClapTrap const &ref ) {
-	this->name = ref.name;
+	this->name		   = ref.name;
 	this->attackDamage = ref.attackDamage;
 	this->energyPoints = ref.energyPoints;
-	this->hitPoints = ref.hitPoints;
+	this->hitPoints	   = ref.hitPoints;
 	std::cout << "ClapTrap copy constructor called." << std::endl;
 }
 
@@ -26,10 +28,10 @@ ClapTrap::~ClapTrap( void ) {
 }
 
 ClapTrap &ClapTrap::operator=( ClapTrap const &ref ) {
-	this->name = ref.name;
+	this->name		   = ref.name;
 	this->attackDamage = ref.attackDamage;
 	this->energyPoints = ref.energyPoints;
-	this->hitPoints = ref.hitPoints;
+	this->hitPoints	   = ref.hitPoints;
 	std::cout << "ClapTrap copy assignment called." << std::endl;
 
 	return ( *this );

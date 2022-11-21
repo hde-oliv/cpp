@@ -6,6 +6,8 @@
 
 #include "Form.hpp"
 
+class Form;
+
 class Bureaucrat {
 	public:
 	Bureaucrat( void );
@@ -14,10 +16,10 @@ class Bureaucrat {
 	~Bureaucrat( void );
 	Bureaucrat &operator=( Bureaucrat const &ref );
 	std::string getName( void ) const;
-	int getGrade( void ) const;
-	void incrementGrade( void );
-	void decrementGrade( void );
-	void signForm( Form &ref ) const;
+	int			getGrade( void ) const;
+	void		incrementGrade( void );
+	void		decrementGrade( void );
+	void		signForm( Form &ref ) const;
 
 	class GradeTooHighException : public std::exception {
 		public:
@@ -31,9 +33,9 @@ class Bureaucrat {
 
 	private:
 	std::string const name;
-	int grade;
-	const int maxGrade = 1;
-	const int minGrade = 150;
+	int				  grade;
+	static const int  maxGrade = 1;
+	static const int  minGrade = 150;
 };
 
 std::ostream &operator<<( std::ostream &o, Bureaucrat const &ref );

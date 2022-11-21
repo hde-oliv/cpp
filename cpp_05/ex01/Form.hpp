@@ -5,18 +5,20 @@
 
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form {
 	public:
 	Form( void );
 	Form( std::string const &name, int signGrade, int executeGrade );
 	Form( Form const &ref );
 	~Form( void );
-	Form &operator=( Form const &ref );
+	Form	   &operator=( Form const &ref );
 	std::string getName( void ) const;
-	bool getIsSigned( void ) const;
-	int getSignGrade( void ) const;
-	int getExecuteGrade( void ) const;
-	void beSigned( Bureaucrat const &ref );
+	bool		getIsSigned( void ) const;
+	int			getSignGrade( void ) const;
+	int			getExecuteGrade( void ) const;
+	void		beSigned( Bureaucrat const &ref );
 
 	class GradeTooHighException : public std::exception {
 		public:
@@ -30,13 +32,13 @@ class Form {
 
 	private:
 	std::string const name;
-	bool isSigned;
-	int const signGrade;
-	int const executeGrade;
-	int const maxGrade = 1;
-	int const minGrade = 150;
+	bool			  isSigned;
+	int const		  signGrade;
+	int const		  executeGrade;
+	static int const  maxGrade = 1;
+	static int const  minGrade = 150;
 };
 
-std::ostream &operator<<( std::ostream &o, Bureaucrat const &ref );
+std::ostream &operator<<( std::ostream &o, Form const &ref );
 
 #endif

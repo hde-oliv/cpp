@@ -7,13 +7,13 @@
 
 Dog::Dog( void ) : Animal() {
 	std::cout << "Dog default constructor called." << std::endl;
-	this->type = "Dog";
+	this->type	= "Dog";
 	this->brain = new Brain();
 }
 
 Dog::Dog( Dog const &ref ) : Animal( ref ) {
 	std::cout << "Dog copy constructor called." << std::endl;
-	this->type = ref.type;
+	this->type	= ref.type;
 	this->brain = new Brain( *ref.brain );
 }
 

@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include <iostream>
 
 #include "Fixed.hpp"
@@ -13,4 +15,3 @@ int main( void ) {
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
 }
-

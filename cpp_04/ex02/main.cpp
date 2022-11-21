@@ -17,6 +17,8 @@ int main( void ) {
 		j->makeSound();
 		// meta->makeSound();
 		std::cout << std::endl;
+		delete i;
+		delete j;
 	}
 	return 0;
 }

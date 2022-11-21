@@ -1,10 +1,10 @@
-SRC		:=	main.cpp Bureaucrat.cpp
+SRC		:=	main.cpp Bureaucrat.cpp Form.cpp
 OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++
 CFLAGS	+=	-Wall -Wextra -Werror -std=c++98 -g3
 RM		:=	rm -rf
-NAME	:=	brasilia
-HEADERS	:=	Bureaucrat.hpp
+NAME	:=	brazil
+HEADERS	:=	Bureaucrat.hpp Form.hpp
 
 all:		$(NAME)
 

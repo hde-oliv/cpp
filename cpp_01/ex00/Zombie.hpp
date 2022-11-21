@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 

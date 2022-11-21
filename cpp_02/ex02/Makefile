@@ -1,3 +1,5 @@
+# Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 SRC		:=	main.cpp Fixed.cpp
 OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++

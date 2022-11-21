@@ -7,13 +7,13 @@
 
 Cat::Cat( void ) : Animal() {
 	std::cout << "Cat default constructor called." << std::endl;
-	this->type = "Cat";
+	this->type	= "Cat";
 	this->brain = new Brain();
 }
 
 Cat::Cat( Cat const &ref ) : Animal( ref ) {
 	std::cout << "Cat copy constructor called." << std::endl;
-	this->type = ref.type;
+	this->type	= ref.type;
 	this->brain = new Brain( *ref.brain );
 }
 

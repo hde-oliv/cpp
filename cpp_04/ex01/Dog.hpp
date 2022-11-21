@@ -11,7 +11,7 @@ class Dog : public Animal {
 	Dog( void );
 	Dog( Dog const &ref );
 	virtual ~Dog( void );
-	Dog &operator=( Dog const &ref );
+	Dog			&operator=( Dog const &ref );
 	virtual void makeSound( void ) const;
 
 	private:

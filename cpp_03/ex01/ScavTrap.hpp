@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #ifndef SCAVTRAP_H
 #define SCAVTRAP_H
 
@@ -12,8 +14,8 @@ class ScavTrap : public ClapTrap {
 	ScavTrap( std::string const &name );
 	~ScavTrap( void );
 	ScavTrap &operator=( ScavTrap const &ref );
-	void attack( const std::string &target );
-	void guardGate( void );
+	void	  attack( const std::string &target );
+	void	  guardGate( void );
 };
 
 #endif

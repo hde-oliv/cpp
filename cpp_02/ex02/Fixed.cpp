@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include "Fixed.hpp"
 
 #include <cmath>
@@ -11,7 +13,7 @@ Fixed::Fixed( int const fixedPoint ) {
 }
 
 Fixed::Fixed( float const fixedPoint ) {
-	const int fp = roundf( fixedPoint * ( 1 << this->fractionalBits ) );
+	const int fp	 = roundf( fixedPoint * ( 1 << this->fractionalBits ) );
 	this->fixedPoint = fp;
 }
 
@@ -54,7 +56,7 @@ Fixed Fixed::operator+( Fixed const &ref ) const {
 
 Fixed Fixed::operator-( Fixed const &ref ) const {
 	Fixed newFixed;
-	newFixed.setRawBits( this->fixedPoint + ref.fixedPoint );
+	newFixed.setRawBits( this->fixedPoint - ref.fixedPoint );
 	return Fixed( newFixed );
 }
 
@@ -98,7 +100,7 @@ int Fixed::toInt( void ) const { return this->fixedPoint >> 8; }
 
 float Fixed::toFloat( void ) const {
 	float const integerPart = this->fixedPoint >> this->fractionalBits;
-	float const fixedOne = 1 << this->fractionalBits;
+	float const fixedOne	= 1 << this->fractionalBits;
 	float const decimalPart = ( ( this->fixedPoint & 0xFF ) / fixedOne );
 	return integerPart + decimalPart;
 }

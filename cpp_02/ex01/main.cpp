@@ -1,9 +1,11 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #include <iostream>
 
 #include "Fixed.hpp"
 
 int main( void ) {
-	Fixed a;
+	Fixed		a;
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
 	Fixed const d( b );

@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #ifndef CLAPTRAP_H
 #define CLAPTRAP_H
 
@@ -10,12 +12,12 @@ class ClapTrap {
 	ClapTrap( ClapTrap const &ref );
 	~ClapTrap( void );
 	ClapTrap &operator=( ClapTrap const &ref );
-	void attack( const std::string &target );
-	void takeDamage( unsigned int amount );
-	void beRepaired( unsigned int amount );
+	void	  attack( const std::string &target );
+	void	  takeDamage( unsigned int amount );
+	void	  beRepaired( unsigned int amount );
 
 	private:
-	std::string name;
+	std::string	 name;
 	unsigned int hitPoints;
 	unsigned int energyPoints;
 	unsigned int attackDamage;

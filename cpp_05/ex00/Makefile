@@ -3,7 +3,7 @@ OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++
 CFLAGS	+=	-Wall -Wextra -Werror -std=c++98 -g3
 RM		:=	rm -rf
-NAME	:=	brasilia
+NAME	:=	brazil
 HEADERS	:=	Bureaucrat.hpp
 
 all:		$(NAME)

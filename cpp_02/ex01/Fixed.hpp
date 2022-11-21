@@ -1,3 +1,5 @@
+// Copyright (C) 2022  Henrique Rocha (hde-oliv)
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
@@ -11,13 +13,13 @@ class Fixed {
 	Fixed( float const fixedPoint );
 	~Fixed( void );
 	Fixed &operator=( Fixed const &ref );
-	int getRawBits( void ) const;
-	void setRawBits( int const raw );
-	float toFloat( void ) const;
-	int toInt( void ) const;
+	int	   getRawBits( void ) const;
+	void   setRawBits( int const raw );
+	float  toFloat( void ) const;
+	int	   toInt( void ) const;
 
 	private:
-	int fixedPoint;
+	int				 fixedPoint;
 	static int const fractionalBits;
 };
 
