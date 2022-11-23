@@ -3,8 +3,8 @@ OBJ		:=	$(SRC:.cpp=.o)
 CC		:=	c++
 CFLAGS	+=	-Wall -Wextra -Werror -std=c++98 -g3
 RM		:=	rm -rf
-NAME	:=	array
-HEADERS	:=	Array.hpp
+NAME	:=	iter
+HEADERS	:=	iter.hpp
 
 all:		$(NAME)
 
