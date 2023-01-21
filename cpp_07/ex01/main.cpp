@@ -5,52 +5,24 @@
 
 #include "iter.hpp"
 
-char toUpper( char c ) {
-	if ( std::isalpha( c ) && c > 96 ) return c - 32;
-	return c;
-}
+void changeToA( char *ptr ) { *ptr = 'A'; }
 
-int raisedByFive( int i ) { return i * i * i * i * i; }
+void printAddress( int const *ptr ) { std::cout << ptr << std::endl; }
 
-int main( void ) {
-	std::cout << "-- test with c-string --" << std::endl;
-	{
-		char *str = new char[80];
+int main() {
+	char c_string[]	 = "Dummy text";
+	int	 int_array[] = { 1, 2, 3, 4, 5 };
 
-		std::strncpy( str,
-					  "One more time, we're gonna celebrate Oh yeah, alright, "
-					  "don't stop the dancing",
-					  78 );
-
-		std::cout << "Before:" << std::endl;
-		std::cout << "\t" << str << std::endl;
-		::iter( str, 77, *toUpper );
-
-		std::cout << std::endl;
-		std::cout << "After:" << std::endl;
-		std::cout << "\t" << str << std::endl;
-	}
+	iter( c_string, 10, printIt<char> );
 	std::cout << std::endl;
-	std::cout << "-- test with int array --" << std::endl;
-	{
-		int *list = new int[10];
 
-		for ( int i = 0; i < 10; i++ ) {
-			list[i] = i;
-		}
+	iter( int_array, 5, printIt<int> );
+	std::cout << std::endl;
 
-		std::cout << "Before:" << std::endl;
-		for ( int i = 0; i < 10; i++ ) {
-			std::cout << "\t" << list[i];
-		}
-		std::cout << std::endl;
-		::iter( list, 77, *raisedByFive );
+	iter( c_string, 4, changeToA );
+	std::cout << c_string << std::endl;
+	std::cout << std::endl;
 
-		std::cout << std::endl;
-		std::cout << "After:" << std::endl;
-		for ( int i = 0; i < 10; i++ ) {
-			std::cout << "\t" << list[i];
-		}
-		std::cout << std::endl;
-	}
+	iter(int_array, 5, printAddress);
+	std::cout << std:: endl;
 }
