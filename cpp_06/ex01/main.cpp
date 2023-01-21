@@ -19,9 +19,11 @@ int main( void ) {
 
 	std::cout << someone->getName() << std::endl;
 
-	someone = deserialize( ptr );
+	Data *someone_converted = deserialize( ptr );
 
-	std::cout << someone->getName() << std::endl;
+	std::cout << someone_converted->getName() << std::endl;
+
+	std::cout << ( someone == someone_converted ) << std::endl;
 
 	return 0;
 }

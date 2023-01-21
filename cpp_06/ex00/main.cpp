@@ -4,8 +4,7 @@
 #include <iostream>
 #include <string>
 
-std::string INFINITE_LITERALS[] = { "-inff", "+inff", "nanf", "-inf",
-									"+inf",	 "nan",	  "inf",  "inff" };
+std::string INFINITE_LITERALS[] = { "-inff", "+inff", "nanf", "-inf", "+inf", "nan", "inf", "inff" };
 
 std::string LIMITS[] = { "-2147483648", "2147483647" };
 
@@ -19,7 +18,8 @@ void toChar( double input ) {
 	}
 
 	char toPrint = static_cast<char>( input );
-	std::cout << "char: " << toPrint << std::endl;
+	std::cout << "char: "
+			  << "'" << toPrint << "'" << std::endl;
 }
 
 void toChar( int input ) {
@@ -34,6 +34,8 @@ void toChar( int input ) {
 	char toPrint = static_cast<char>( input );
 	std::cout << "char: " << toPrint << std::endl;
 }
+
+void toDouble( double input ) { std::cout << "double: " << input << std::endl; }
 
 void toFloat( double input ) {
 	float toPrint = static_cast<float>( input );
@@ -68,8 +70,6 @@ void handleLimits( std::string limit ) {
 	std::cout << "double: " << convertedInput << std::endl;
 }
 
-void toDouble( double input ) { std::cout << "double: " << input << std::endl; }
-
 int main( int argc, char *argv[] ) {
 	if ( argc != 2 ) {
 		return 1;
@@ -84,9 +84,9 @@ int main( int argc, char *argv[] ) {
 		}
 	}
 
-	if ( std::atoll( input.c_str() ) > 2147483647 ||
-		 std::atoll( input.c_str() ) < -2147483648 ) {
+	if ( std::atoll( input.c_str() ) > 2147483647 || std::atoll( input.c_str() ) < -2147483648 ) {
 		handleLimits( input );
+		return 0;
 	}
 
 	double convertedInput;

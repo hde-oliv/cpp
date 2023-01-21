@@ -46,19 +46,28 @@ void identify( Base &p ) {
 	try {
 		A &ref = dynamic_cast<A &>( p );
 		std::cout << "Type is A." << std::endl;
-	} catch ( std::exception e ) {
+		(void)ref;
+	} catch ( std::exception &e ) {
 		try {
 			B &ref = dynamic_cast<B &>( p );
 			std::cout << "Type is B." << std::endl;
-		} catch ( std::exception e ) {
+			(void)ref;
+		} catch ( std::exception &e ) {
 			try {
 				C &ref = dynamic_cast<C &>( p );
 				std::cout << "Type is C." << std::endl;
-			} catch ( std::exception e ) {
+				(void)ref;
+			} catch ( std::exception &e ) {
 				return;
 			}
 		}
 	}
 }
 
-int main( void ) { return 0; }
+int main( void ) {
+	Base *p = generate();
+	identify( p );
+
+	Base &r = *p;
+	identify( r );
+}
